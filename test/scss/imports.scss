@@ -1,7 +1,5 @@
 /* @import "another/module"; */
 @import "another/module";
-/* @import "~another/module"; */
-@import "~another/module";
 /* @import "another/underscore"; */
 @import "another/underscore";
 /* @import "another/_underscore"; */
@@ -12,9 +10,6 @@
 // @see https://github.com/webpack-contrib/sass-loader/issues/167
 /* @import "~scss/some.module"; */
 @import "~scss/some.module";
-// @see https://github.com/webpack-contrib/sass-loader/issues/360
-/* @import "~animate.css/animate"; */
-@import "~animate.css/animate";
 /* @import url(http://example.com/something/from/the/interwebs); */
 @import url(http://example.com/something/from/the/interwebs);
 /* scoped import @import "language"; */
@@ -27,5 +22,8 @@
 @import "util";
 /* @import "~module"; */
 @import "~module";
-/* @import "~other-module"; */
-@import "~other-module";
+/* @import "~another"; */
+@import "~another";
+/* @import "~@org/style"; */
+// Should prefer `scss`
+@import "~@org/style";
